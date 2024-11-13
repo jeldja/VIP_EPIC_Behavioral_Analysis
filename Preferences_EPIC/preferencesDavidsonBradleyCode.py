@@ -18,7 +18,8 @@ initial_scores = np.ones(n + 1)
 
 def davidson_log_likelihood(params, data, condition_to_idx):
     scores = params[:-1]  # Condition scores
-    tau = params[-1]  # Tie parameter
+    # tau = params[-1]  # Tie parameter
+    delta = params[-1]  # Tie parameter
     
     log_likelihood = 0
     for _, row in data.iterrows():
@@ -28,10 +29,10 @@ def davidson_log_likelihood(params, data, condition_to_idx):
         score1 = scores[idx1]
         score2 = scores[idx2]
         
-        denom = score1 + score2 + tau
+        denom = score1 + score2 # + tau
         prob1 = score1 / denom
         prob2 = score2 / denom
-        prob_tie = tau / denom
+        prob_tie = delta*(np.sqrt(score1*score2) / denom) # tau / denom
 
         if row['Relative'] == 1:
             log_likelihood += np.log(prob2)  # Condition 2 was preferred.
@@ -53,7 +54,8 @@ result = minimize(
 
 # getting optimized scores and tau
 final_scores = result.x[:-1]
-tau = result.x[-1]
+# tau = result.x[-1]
+delta = result.x[-1]
 
 # dataframe with conditions and scores.
 scores_df = pd.DataFrame({
@@ -63,5 +65,12 @@ scores_df = pd.DataFrame({
 
 # Sorting the scores for the preferences rank.
 scores_df = scores_df.sort_values(by='Score', ascending=False).reset_index(drop=True)
+normalized_scores_df = scores_df.copy()
+
+max_score = np.max(scores_df['Score'])
+min_score = np.min(scores_df['Score'])
+normalized_scores_df['Score'] = np.round(100*(scores_df['Score'] - min_score)/(max_score - min_score),3)
 print(scores_df)
-print(f"Tau (tie parameter): {tau}")
+print(normalized_scores_df)
+# print(f"Tau (tie parameter): {tau}")
+print(f"Delta (tie parameter): {delta}")
