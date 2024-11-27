@@ -1,7 +1,7 @@
 # VIP EPIC BEHAVIOR ANALYSIS
 - Welcome to the repository for the projects within Georgia Institute of Technology's Vertical Integrated Projects with the Robotic Human Augmentation team,
 also known as Exoskeleton and Prosthesis Intelligent Controls.
-- Under the advisory of Dr. Aaron Young and Keya Ghonasgi.
+- Under the advisory of Dr. Aaron Young and Dr.Keya Ghonasgi.
 - Subteam : Hip Exoskeleton
 - Subteam of Subteam : Behavioral Analysis
 
