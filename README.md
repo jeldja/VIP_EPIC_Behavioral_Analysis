@@ -11,4 +11,11 @@ Two Folders:
 Preferences
 Preferences Analysis
 
-Preference Analysis contains code to run Bradley Terry Model and the Davidson Bradley Terry Model. We used the Davidson Bradley Terry Model to rank different assistance modes. 
+Preference folder contains code to run the Davidson Bradley Terry Model. We used the Davidson Bradley Terry Model to rank different assistance modes. 
+
+Preference Analysis folder contains codes to run the statistical analysis.
+Within the folder has the BL Experiments analysis and the Summer AB Experiments folders. Each of the folder contains the code we ran for each experiment. 
+
+statsticsRepeatedMeasures.py = Repeated ANOVA measures tests
+averageCode.py = mean of each assistance level
+
