@@ -19,7 +19,8 @@ Within the folder has the BL Experiments analysis and the Summer AB Experiments 
 SUMMER AB EXPERIMENTS
 - statsticsRepeatedMeasures.py = Repeated ANOVA measures tests
 - averageCode.py = mean of each assistance level
-BL EXPERIMENTS
+
+BL CONDITIONS
 - Assistance Level All Conditions = make plots with all conditions of each delay within that assistance level + assistance level mean
 - Assistance Magnitude (Left and Right Separate) = plots of the means of R1, R2, L1, L2
 - Assistance Magnitude Both with Scores = plots of assistance magnitude Means = R1L1, R1L2, R2L1, R2L2
