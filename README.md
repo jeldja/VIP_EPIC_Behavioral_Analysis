@@ -16,6 +16,13 @@ Preference folder contains code to run the Davidson Bradley Terry Model. We used
 Preference Analysis folder contains codes to run the statistical analysis.
 Within the folder has the BL Experiments analysis and the Summer AB Experiments folders. Each of the folder contains the code we ran for each experiment. 
 
-statsticsRepeatedMeasures.py = Repeated ANOVA measures tests
-averageCode.py = mean of each assistance level
+SUMMER AB EXPERIMENTS
+- statsticsRepeatedMeasures.py = Repeated ANOVA measures tests
+- averageCode.py = mean of each assistance level
+BL EXPERIMENTS
+- Assistance Level All Conditions = make plots with all conditions of each delay within that assistance level + assistance level mean
+- Assistance Magnitude (Left and Right Separate) = plots of the means of R1, R2, L1, L2
+- Assistance Magnitude Both with Scores = plots of assistance magnitude Means = R1L1, R1L2, R2L1, R2L2
+- Delay All Conditions = make plots with all assistance magnitude conditions within each delay + delay level mean
+- Dealy Mean = make plots with each delay condition mean
 
