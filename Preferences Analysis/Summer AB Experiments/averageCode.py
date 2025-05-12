@@ -4,7 +4,6 @@ import math
 import matplotlib.pyplot as plt
 
 def calculate_assistance_stats(folder_path):
-    # Setting up dictionary for different levels of applied assistance.
     assistance_stats = {
         '0%': {'scores': []},
         '10%': {'scores': []},
@@ -20,7 +19,7 @@ def calculate_assistance_stats(folder_path):
                 condition = row['Condition']
                 score = row['Score']
 
-                # Adding all the scores in each level of applied assistance
+                #adding all the scores in each level of applied assistance
                 if 'S0' in condition:
                     assistance_stats['0%']['scores'].append(score)
                 elif 'S1' in condition:
@@ -63,7 +62,7 @@ def plot_assistance_stats(stats):
     plt.show()
 
 if __name__ == "__main__":
-    folder_path = r'C:\Users\user\enterYourFolderPath'  # Change folder path to yours.
+    folder_path = r'C:\Users\user\enterYourFolderPath'  #your folder path
     stats = calculate_assistance_stats(folder_path)
     
     print("Statistics for Each Assistance Level:")

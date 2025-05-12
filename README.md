@@ -5,4 +5,10 @@ also known as Exoskeleton and Prosthesis Intelligent Controls.
 - Subteam : Hip Exoskeleton
 - Subteam of Subteam : Behavioral Analysis
 
-- Students currently working on this project: Katie Peterka and Jelovy Djaja
+Jelovy Djaja's Code
+
+Two Folders: 
+Preferences
+Preferences Analysis
+
+Preference Analysis contains code to run Bradley Terry Model and the Davidson Bradley Terry Model. We used the Davidson Bradley Terry Model to rank different assistance modes. 
